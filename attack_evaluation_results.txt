@@ -1,0 +1,88 @@
+=== 第六步：实施攻击验证 (MIA) ===
+成功加载训练数据 (Shadow): 20000 条记录
+成功加载测试数据 (Target): 20000 条记录
+
+使用的特征维度: ['perplexity_mean', 'perplexity_std', 'loss_mean_mean', 'loss_mean_std', 'loss_std_mean', 'loss_std_std', 'max_prob_mean_mean', 'max_prob_mean_std', 'max_prob_std_mean', 'max_prob_std_std', 'entropy_mean_mean', 'entropy_mean_std', 'entropy_std_mean', 'entropy_std_std', 'ast_node_count', 'ast_error_count', 'ast_max_depth', 'ast_cyclomatic_complexity', 'ast_method_count', 'ast_identifier_count', 'ast_literal_count', 'ast_loop_count', 'ast_branch_count', 'ast_exception_count', 'ast_error_ratio', 'ast_literal_ratio', 'ast_identifier_ratio']
+
+🚀 正在训练 Random Forest 分类器...
+
+--- 【Random Forest】评估结果 ---
+Accuracy (准确率): 0.4986
+Precision (精确率): 0.4987
+Recall (召回率):    0.5053
+F1-Score (F1分数):  0.5020
+ROC AUC (AUC值):    0.5016
+
+[Random Forest 特征重要性]:
+  - perplexity_mean: 0.0697
+  - perplexity_std: 0.0693
+  - loss_mean_mean: 0.0563
+  - loss_mean_std: 0.0607
+  - loss_std_mean: 0.0587
+  - loss_std_std: 0.0617
+  - max_prob_mean_mean: 0.0570
+  - max_prob_mean_std: 0.0565
+  - max_prob_std_mean: 0.0574
+  - max_prob_std_std: 0.0619
+  - entropy_mean_mean: 0.0575
+  - entropy_mean_std: 0.0606
+  - entropy_std_mean: 0.0581
+  - entropy_std_std: 0.0623
+  - ast_node_count: 0.0353
+  - ast_error_count: 0.0000
+  - ast_max_depth: 0.0000
+  - ast_cyclomatic_complexity: 0.0083
+  - ast_method_count: 0.0048
+  - ast_identifier_count: 0.0349
+  - ast_literal_count: 0.0107
+  - ast_loop_count: 0.0036
+  - ast_branch_count: 0.0083
+  - ast_exception_count: 0.0028
+  - ast_error_ratio: 0.0000
+  - ast_literal_ratio: 0.0209
+  - ast_identifier_ratio: 0.0225
+
+🚀 正在训练 XGBoost 分类器...
+C:\Users\cw073\AppData\Roaming\Python\Python313\site-packages\xgboost\training.py:200: UserWarning: [15:57:33] WARNING: C:\actions-runner\_work\xgboost\xgboost\src\learner.cc:782:
+Parameters: { "use_label_encoder" } are not used.
+
+  bst.update(dtrain, iteration=i, fobj=obj)
+
+--- 【XGBoost】评估结果 ---
+Accuracy (准确率): 0.4997
+Precision (精确率): 0.4997
+Recall (召回率):    0.5045
+F1-Score (F1分数):  0.5021
+ROC AUC (AUC值):    0.5003
+
+[XGBoost 特征重要性]:
+  - perplexity_mean: 0.0408
+  - perplexity_std: 0.0414
+  - loss_mean_mean: 0.0405
+  - loss_mean_std: 0.0422
+  - loss_std_mean: 0.0434
+  - loss_std_std: 0.0418
+  - max_prob_mean_mean: 0.0417
+  - max_prob_mean_std: 0.0428
+  - max_prob_std_mean: 0.0424
+  - max_prob_std_std: 0.0434
+  - entropy_mean_mean: 0.0438
+  - entropy_mean_std: 0.0426
+  - entropy_std_mean: 0.0434
+  - entropy_std_std: 0.0427
+  - ast_node_count: 0.0377
+  - ast_error_count: 0.0000
+  - ast_max_depth: 0.0000
+  - ast_cyclomatic_complexity: 0.0395
+  - ast_method_count: 0.0403
+  - ast_identifier_count: 0.0424
+  - ast_literal_count: 0.0372
+  - ast_loop_count: 0.0420
+  - ast_branch_count: 0.0426
+  - ast_exception_count: 0.0435
+  - ast_error_ratio: 0.0000
+  - ast_literal_ratio: 0.0426
+  - ast_identifier_ratio: 0.0391
+
+🎉 攻击验证完成！
+结论：如果 AUC 和 Accuracy 明显高于 0.5 (例如达到 0.65 甚至 0.8 以上)，说明成员推理攻击成功！ 目标模型泄漏了其训练数据的隐私。
