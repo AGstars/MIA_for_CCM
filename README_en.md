@@ -85,3 +85,10 @@ SKIP_INSTALL=1 SKIP_DATA=1 SKIP_TRAIN_TARGET=1 SKIP_TRAIN_SHADOW=1 SKIP_EXTRACT=
 ## Citation
 
 If this repository helps your research, please consider citing it in your papers/reports.
+
+## Project Statement
+
+The author and affiliation if this project：
+Project Name：Membership Inference for Code Completion Models
+Autthor：Wong Tin Lok
+Affiliation：College of Cyber Security, Jinan University
