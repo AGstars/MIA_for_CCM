@@ -91,4 +91,3 @@ If this repository helps your research, please consider citing it in your papers
 - The author and affiliation if this project：
 - Project Name：Membership Inference for Code Completion Models
 - Autthor：Wong Tin Lok
-- Affiliation：College of Cyber Security, Jinan University
