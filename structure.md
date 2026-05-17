@@ -31,17 +31,6 @@ To keep the repository lightweight, all large generated artifacts (models, datas
 └── structure.md                # This structure documentation
 ```
 
-## 🚫 Ignored Files / 被忽略的文件 (不会上传至 GitHub)
-
-Based on the `.gitignore` rules, the following files are generated during execution but **will not be pushed** to GitHub to save bandwidth and storage:
-
-1. **Models (`**/models/`)**: Target and shadow models (`.safetensors`, `.bin`).
-2. **Datasets (`**/mia_data/`, `**/mia_data_raw/`)**: HuggingFace cached datasets (`.arrow`).
-3. **Extracted Features (`*.csv`)**: `attack_train_dataset.csv`, `attack_test_dataset.csv`.
-4. **Plots & Results (`**/plots/`)**: Generated PNGs, metrics tables, and evaluation logs (except `README.md` inside `plots`).
-5. **Defense Runs (`**/defense_runs/`)**: Model checkpoints and output charts generated during `defense_sweep.py` evaluations.
-6. **Environment & Caches**: `.venv/`, `__pycache__/`, `.ipynb_checkpoints/`, `*.log`.
-
 ## 💡 How to navigate / 如何阅读源码
 
 - **Entry Point**: Start with `AutoDL_MIA/run_all.sh` to understand the overall 6-step pipeline (from data prep to plotting).
