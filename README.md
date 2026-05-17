@@ -1,3 +1,5 @@
+[English](./README_en.md) | [简体中文](./README.md)
+
 # AutoDL_MIA：代码补全模型的成员推理攻击（MIA）复现
 
 本目录提供一个可复现的成员推理攻击（Membership Inference Attack, MIA）实验流水线，面向自回归式代码补全模型（Causal LM / CodeGPT 风格），评估其对训练样本的隐私泄漏风险。
